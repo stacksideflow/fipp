@@ -58,7 +58,7 @@
     (pretty-coll this "[" x :line "]" visit))
 
   (visit-map [this x]
-    (pretty-coll this "{" x [:span "," :line] "}"
+    (pretty-coll this "{" x [:span :line] "}"
       (fn [printer [k v]]
         [:span (visit printer k) " " (visit printer v)])))
 
